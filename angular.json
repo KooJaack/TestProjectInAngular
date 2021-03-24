@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MediatecTestProject"
+    }
+  },
+  "defaultProject": "MediatecTestProject",
+  "cli": {
+    "analytics": false
+  }
 }

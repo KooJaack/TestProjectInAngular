@@ -1,0 +1,9 @@
+<div>
+    <div>
+        <select>
+            <option *ngFor="let layoutType of layoutTypes" [value]="layoutType">{{layoutType}}</option>
+        </select>
+    </div>
+    <app-item *ngFor="let item of items | async" [item] = "item" [class] = "layout"></app-item>
+    <button class="btn-primary--large" (click)="onLoadMoreClick()">Load more</button>
+</div>
