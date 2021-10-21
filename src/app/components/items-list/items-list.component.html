@@ -1,0 +1,33 @@
+<div class="list-container">
+    <div class="filters">
+        <div>
+            Layout: 
+            <select (change)="changeItemsLayout()" [(ngModel)]="layout">
+                <option *ngFor="let layoutType of layoutTypes" [value]="layoutType">{{layoutType}}</option>
+            </select>
+        </div>
+        <div>
+            Page size: 
+            <input id="pageSize" (change)="changePageSize()" [(ngModel)]="pageSize" type="number" />
+        </div>
+    </div>
+    <ng-container *ngIf="layout === allItemsLayout.CARDS">
+        <div class="list-cards">   
+            <div *ngFor="let item of items | async">
+                <app-item [item] = "item" [class] = "layout"></app-item>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="layout === allItemsLayout.POSTS">
+        <div class="list-posts">
+            <div *ngFor="let item of items | async">
+                <app-item [item] = "item" [class] = "layout"></app-item>
+            </div>
+        </div>
+    </ng-container>
+    <div class="list-button">
+        <button *ngIf="loadMoreButtonVisible" class="floating-button" (click)="onLoadMoreClick()">Load more</button>
+    </div>
+</div>
+
+<ngx-ui-loader></ngx-ui-loader>

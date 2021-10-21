@@ -1,0 +1,44 @@
+.list-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.list-button{
+    margin-top: 16px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters{
+    margin-bottom: 10px;
+}
+.filters > div {
+    margin-right: 10px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.list-cards{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 16px;
+}
+
+.list-posts{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(autofit-fit, 1fr);
+    grid-gap: 16px;
+}
+
+.floating-button{
+    background-color: #1976d2;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}

@@ -1,0 +1,16 @@
+<div [ngClass] = "itemsLayout">
+    <div @ItemsTrigger class="item-wrapper">
+        <article [ngClass] = "itemsLayout" >
+            <img class="image" src={{item.imageUrl}}/>
+            <span class="title">{{item.title}}</span>
+            <span class="description">
+                <div class="truncate-text">{{item.description}}</div>
+            </span>
+            <div class="date" *ngIf="itemsLayout === 'posts'">
+                <span>
+                    {{item.publicationTime | date: 'dd.MM.yyyy' }}
+                </span>
+            </div>
+        </article>
+    </div>
+</div>

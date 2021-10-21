@@ -1,0 +1,91 @@
+.item-wrapper > .cards {
+    height: 250pt;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 55% auto;
+    grid-template-areas: 
+    "image"
+    "title"
+    "description"
+    "date";
+}
+
+.cards > img {
+    grid-area: image;
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+
+.cards > .title {
+    grid-area: title;
+    padding: 10px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.cards > .description{
+    grid-area: description;
+    padding: 0px 10px 10px 10px;
+    color: rgb(160, 160, 160);
+    margin: 0 0 1em 0;
+}
+
+.truncate-text{
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.cards > .date {
+    grid-area: date;
+    align-self: end;
+    padding: 0px 10px 0px 10px;
+    color: rgb(160, 160, 160);
+}
+
+.item-wrapper > .posts {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(249, 249, 249);
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "image title"
+    "image description"
+    "image date"
+    "image date";
+}
+
+.posts > img {
+    grid-area: image;
+    object-fit:cover;
+    width: 200px;
+    height: 200px;
+}
+
+.posts > .title {
+    grid-area: title;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.posts > .description {
+    grid-area: description;
+    padding: 0px 10px 10px 10px;
+    color: rgb(160, 160, 160);
+}
+
+.posts > .date {
+    grid-area: date;
+    padding: 0px 10px 0px 10px;
+    color: rgb(160, 160, 160);
+}
+
+.cards > .item-wrapper{
+    background-color: rgb(220, 220, 220);
+    padding: 3px;
+}
